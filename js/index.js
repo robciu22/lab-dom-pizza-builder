@@ -1,7 +1,7 @@
 // Write your Pizza Builder JavaScript in this file.
 
 // Constants
-const basePrice = 11;
+const basePrice = 10;
 const ingredients = {
     pepperoni: { name: 'pepperoni', price: 1 },
     mushrooms: { name: 'Mushrooms', price: 1 },
@@ -87,6 +87,7 @@ function renderGlutenFreeCrust() {
     });
 }
 
+/*
 function renderButtons() {
 
     let button = document.querySelector('.button')
@@ -99,21 +100,21 @@ function renderButtons() {
         button.style.visibility = 'hidden';
     }
 };
-/*
+*/
 
 function renderButtons() {
-  // Iteration 3: add/remove the class "active" of each `<button class="btn">`
-  const buttons = document.querySelectorAll('button');
-  buttons.forEach((button) => {
-    const tempKey = button.classList[1].replace('btn-', '');
-    if (state[tempKey]) {
-      button.classList.add('active');
-    } else {
-      button.classList.remove('active');
-    }
-  });
+    // Iteration 3: add/remove the class "active" of each `<button class="btn">`
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+        const tempKey = button.classList[1].replace('btn-', '');
+        if (state[tempKey]) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
 }
-*/
+
 
 /*
 let input = document.querySelector(".input");
@@ -134,23 +135,20 @@ function stateHandle() {
 
 function renderPrice() {
     // Iteration 4: change the HTML of `<aside class="panel price">`
-    /*
-    function renderPrice() {
-  // Iteration 4: change the HTML of `<aside class="panel price">`
-  const totalElement = document.querySelector('.panel.price strong');
-  const ingredientKeys = Object.keys(ingredients);
-  let total = basePrice;
+    const totalElement = document.querySelector('.panel.price strong');
+    const ingredientKeys = Object.keys(ingredients);
+    let total = basePrice;
 
-  ingredientKeys.forEach((ingredientKey) => {
-    if (state[ingredientKey]) {
-      total += ingredients[ingredientKey].price;
-    }
-  });
+    ingredientKeys.forEach((ingredientKey) => {
+        if (state[ingredientKey]) {
+            total += ingredients[ingredientKey].price;
+        }
+    });
 
-  totalElement.innerHTML = `$${total}`;
+    totalElement.innerHTML = `$${total}`;
 }
-    */
-}
+
+
 
 renderEverything();
 
